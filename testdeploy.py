@@ -42,10 +42,20 @@ def auth_filter(request, app):
         return test
     return app(request)
 
+def filter_factory(global_conf, **local_conf):
+    return auth_filter
+
+# filter_factory
+def filter_factory(global_conf, **local_conf):
+    return auth_filter
 
 # app_factory
 def show_factory(global_conf, **local_conf):
     return application
+
+
+
+
 
 
 # app_factory
@@ -59,8 +69,7 @@ def showauther_factory(global_conf, **local_conf):
 
 
 # filter_factory
-def filter_factory(global_conf, **local_conf):
-    return auth_filter
+
 
 
 # filter_factory
